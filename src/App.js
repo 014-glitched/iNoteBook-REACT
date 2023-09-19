@@ -1,6 +1,6 @@
 import './App.css';
 import * as React from "react";
-import { createRoot } from "react-dom/client";
+//import { createRoot } from "react-dom/client";
 import {
   BrowserRouter as Router,
   Route,
@@ -9,11 +9,13 @@ import {
 import Navbar from './Components/Navbar';
 import { Home } from './Components/Home';
 import About from './Components/About';
+import NoteState from './Context/notes/NoteState';
 
 
 function App() {
   return (
     <>
+    <NoteState>
     <Router>
         <Navbar/>
         
@@ -23,6 +25,7 @@ function App() {
             
         </Routes>
     </Router>
+    </NoteState>
     </>
   );
 }
